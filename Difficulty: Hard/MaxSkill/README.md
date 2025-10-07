@@ -1,0 +1,15 @@
+<h2><a href="https://www.geeksforgeeks.org/problems/burst-balloons/1">MaxSkill</a></h2><h3>Difficulty Level : Difficulty: Hard</h3><hr><div class="problems_problem_content__Xm_eO"><p><span style="font-size: 14pt;"><span style="font-size: 14pt;">You are given </span><span style="font-size: 18.6667px;">a queue of<strong> n </strong>people</span><span style="font-size: 14pt;">&nbsp;indexed from </span><strong style="font-size: 14pt;">0</strong><span style="font-size: 14pt;"> to </span><strong style="font-size: 14pt;">n-1</strong><span style="font-size: 14pt;">.&nbsp;</span><span style="font-size: 18.6667px;">Each person has a <strong>rating </strong>represented by an array <strong>arr[]</strong></span><strong style="font-size: 14pt;">.</strong><span style="font-size: 14pt;"> You are asked to remove all the persons from the queue. </span></span><span style="font-size: 14pt;"><span style="font-size: 18.6667px;">If you remove the<strong> i-th </strong>person from the queue, you gain a skill value of <strong>arr[i - 1] * arr[i] * arr[i + 1]</strong></span><span style="font-size: 14pt;">.&nbsp;</span></span><span style="font-size: 18.6667px;">Return the <strong>maximum total</strong> skill you can obtain by removing the people optimally.</span></p>
+<p><span style="font-size: 14pt;">Note:&nbsp;</span><span style="font-size: 18.6667px;">If <strong>i - 1</strong> or <strong>i + 1</strong> is out of bounds, assume there is an implicit person with a rating of <strong>1 </strong>at that position.</span></p>
+<p><strong><span style="font-size: 18px;">Examples:</span></strong></p>
+<pre><span style="font-size: 18px;"><strong>Input: </strong>arr[] = [5, 10] 
+<strong>Output:</strong> 60
+<strong>Explanation:</strong><br></span><span style="font-size: 18px;">Remove person with rating 5 → Skill gained = 1 * 5 * 10 = 50, remaining queue: [10].
+Remove person with rating 10 → Skill gained = 1 * 10 * 1 = 10, total skill = 50 + 10 = 60.</span></pre>
+<pre><span style="font-size: 18px;"><strong>Input: </strong>arr[] = [3, 2, 5, 8]<strong>
+Output: </strong>182<strong>
+Explanation:
+</strong>Remove person with rating 2 → Skill gained = 3 * 2 * 5 = 30, remaining queue: [3, 5, 8].
+Remove person with rating 5 → Skill gained = 3 * 5 * 8 = 120, remaining queue: [3, 8].
+Remove person with rating 3 → Skill gained = 1 * 3 * 8 = 24, remaining queue: [8].
+Remove person with rating 8 → Skill gained = 1 * 8 * 1 = 8, total skill = 30 + 120 + 24 + 8 = 182</span></pre>
+<p><span style="font-size: 18px;"><strong>Constraints:</strong><br></span><span style="font-size: 18px;">1 ≤ n ≤ 300</span><br style="font-size: 18px;"><span style="font-size: 18px;">0 ≤ arr[i] ≤ 100</span></p></div><br><p><span style=font-size:18px><strong>Topic Tags : </strong><br><code>Arrays</code>&nbsp;<code>Dynamic Programming</code>&nbsp;<code>Data Structures</code>&nbsp;<code>Algorithms</code>&nbsp;
