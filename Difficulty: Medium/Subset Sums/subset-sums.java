@@ -1,21 +1,20 @@
 // User function Template for Java//User function Template for Java
 class Solution {
-    void findSubsetSum(int idx, int sum,int[] arr, ArrayList<Integer> ans){
-       if(idx==arr.length){
-           ans.add(sum);
-           return;
-       } 
-       // Pick the element
-       findSubsetSum(idx+1,sum+arr[idx],arr,ans);
-       // Not Pick the element
-       findSubsetSum(idx+1,sum,arr,ans);
+    static void f(int idx, int currSum,int[] arr,ArrayList<Integer> sums){
+        if(idx==arr.length){
+            sums.add(currSum);
+            return ;
+        }
+        
+        f(idx+1,currSum+arr[idx],arr,sums);
+        
+        f(idx+1,currSum,arr,sums);
     }
     public ArrayList<Integer> subsetSums(int[] arr) {
-        // code here
-        ArrayList<Integer> ans=new ArrayList<>();
-        findSubsetSum(0,0,arr,ans);
-        Collections.sort(ans);
-        return ans;
+        ArrayList<Integer> sums=new ArrayList<>();
+        f(0,0,arr,sums);
+        Collections.sort(sums);
+        return sums;
         
     }
 }
